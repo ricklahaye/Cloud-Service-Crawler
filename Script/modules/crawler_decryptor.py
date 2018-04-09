@@ -156,7 +156,7 @@ class decryptor:
         dropbox_dbx = os.path.join(mount_dir, "Users/", user, "AppData/Local/Dropbox/instance1/config.dbx") # dbx
         dropbox_dbx_file = os.path.join(mount_dir, "Users/", user, "AppData/Local/Dropbox/instance1/filecache.dbx") # dbx
         #password = raw_input("Enter above DBX Key: ")
-        cmd = "./Dropbox/sqlite-dbx-tux64 -key " + dropbox_key + " " + dropbox_dbx + " \".backup /tmp/config.db\""
+        cmd = os.path.join(binaries_dir, "working_binaries/Dropbox/sqlite-dbx-tux64") + " -key " + dropbox_key + " " + dropbox_dbx + " \".backup /tmp/config.db\""
         #print(repr(cmd))   # debug parameter to see what will get inserted into binary
         os.system(cmd)
         cmd = os.path.join(binaries_dir, "working_binaries/Dropbox/sqlite-dbx-tux64") + " -key " + dropbox_key + " " + dropbox_dbx_file + " \".backup /tmp/filecache.db\""
