@@ -14,7 +14,8 @@ chmod +x Script/working_binaries/Dropbox*
 
 ## Usage
 
-Usage:
+Run crawler.py in the Script folder:
+
 ```
 usage: python crawler.py (-f FILE | -d DIR) -t TARGET
 
