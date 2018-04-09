@@ -3,3 +3,4 @@ dpapick
 M2Crypto==0.22.3
 ssdeep
 python-registry
+scandir
