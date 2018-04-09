@@ -1,0 +1,35 @@
+# This is the plan for our project
+The steps we are going to take are:
+* **Creating the environment**
+    1. Creating 2 Virtual Machines:
+        * Windows 7 **\<Info Missing>**
+        * Debian **\<Info Missing>**
+    2. Adding cloud file storing services to the environments:
+        * Dropbox
+        * One Drive
+        * Google Drive
+        * Mega
+        * ICloud (**Windows Only**)
+    3. Creating accounts <username>
+    4. Populating services with test data to be synced
+    5. Creating snapshots of the VMs
+* **Creating the Crawler**
+    * Specifications:
+        * Language - Python 3
+        * Multi-threaded aproach
+        * **More?**
+    * Aproach:
+        * Core of the Crawler
+            * Finding info about the system being run on
+            * Finding services
+            * Creating threaded jobs for each service found present on the system
+                * Each thread locates folders and files belonging to the service
+                * **Possibly:** Find loging information about files that have been synced previously but are not present on the system anymore
+                * Extract metadata from the files
+                * Extract sync information about the files
+                * Attempt to recover files that are not present on the system anymore
+        * Extra features
+            * Find servers that files got synced to
+            * Geolocation of the servers
+            * **Rating?:** the possibility to request access to files
+            * Info on the requirements to request the files from the services
